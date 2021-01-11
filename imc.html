@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>IMC</title>
+        <script>
+            var nome = prompt("Qual o seu nome?") // 1)
+            var altura = prompt("Qual a sua altura (em centimetros)?") // 2)
+            var peso = prompt("Qual o seu peso?") // 3)
+            peso = parseFloat(peso) // 4)
+            altura = parseFloat(altura) // 4)
+            altura /= 100 // 5)
+            var M = peso / (altura * altura) // 6)
+
+            if (M < 16) {
+                classe = ('Baixo peso muito grave')
+            } else if (M >= 16 && M < 17) {
+                classe = ('Baixo peso grave')
+            } else if (M >= 17 && M < 18.5) {
+                classe = ('Baixo peso')
+            } else if (M >= 18.5 && M < 25) {
+                classe = ('Peso normal')
+            } else if (M >= 25 && M < 30) {
+                classe = ('Sobrepeso')
+            } else if (M >= 30 && M < 35) {
+                classe = ('Obesidade grau I')
+            } else if (M >= 35 && M < 40) {
+                classe = ('Obesidade grau II')
+            } else if (M >= 40) {
+                classe = ('Obesidade grau III')
+            }
+            classe = classe.toFixed(2)
+
+            alert(nome + " possui índice de massa corporal igual a " + M + " sendo classificado como: " + classe)
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <tittle>Calculadora</tittle>
+        <script>
+            //iniciando as variaveis
+            var num1 = prompt('Insira o primeiro numero: ')
+            var op = prompt('Insira a operação a ser realizada soma ou subtração: ')
+            var num2 = prompt('Insira o segundo numero: ')
+
+            //Criação da Função
+            function calculadora(num1, num2, op) {
+                if (op == 'soma') {
+                    var resultado = (num1 + num2)
+                    return num1 + num2
+                } else if (op == 'subtração') {
+                    var resultado = (num1 - num2)
+                    return num1 - num2
+                } else {
+                    return 'Operação errada'
+                }
+            }
+            var resultado = calculadora(num1, num2, op)
+            document.write('O resultado é: ' + resultado)
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
